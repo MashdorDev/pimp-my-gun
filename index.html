@@ -25,8 +25,14 @@
   <script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0-nightly.2026.10.20/ruffle.js"></script>
   <script>
     window.addEventListener("load", function () {
-      var player = window.RufflePlayer.newest().createPlayer();
-      document.getElementById("player").appendChild(player);
+      var ruffle = window.RufflePlayer.newest && window.RufflePlayer.newest();
+      var box = document.getElementById("player");
+      if (!ruffle) {
+        box.textContent = "The Flash player (Ruffle) failed to load. Check that unpkg.com isn't blocked, then reload.";
+        return;
+      }
+      var player = ruffle.createPlayer();
+      box.appendChild(player);
       player.ruffle().load("game/pimpmygun.swf");
     });
   </script>
