@@ -3,21 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pimp My Gun</title>
-  <meta name="description" content="Play the Flash game Pimp My Gun in the browser, through the Ruffle emulator.">
+  <title>Pimp My Gun - Play the Flash Gun Builder Online</title>
+  <meta name="description" content="Play Pimp My Gun, the classic Flash gun customizer by Doctor Noob, free in your browser with no Flash plugin. Build custom M4, AK, SCAR and HK rifles from hundreds of parts.">
+  <link rel="canonical" href="https://mashdordev.github.io/pimp-my-gun/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pimp My Gun - Play the Flash Gun Builder Online">
+  <meta property="og:description" content="The classic Flash gun customizer, preserved and playable in your browser.">
+  <meta property="og:url" content="https://mashdordev.github.io/pimp-my-gun/">
+  <meta property="og:image" content="https://mashdordev.github.io/pimp-my-gun/media/screenshot-final.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"VideoGame","name":"Pimp My Gun","alternateName":"Pimp My Gun Flash game","description":"A Flash gun customizer: build custom rifles from a library of real-world weapon parts.","author":{"@type":"Person","name":"Doctor Noob"},"genre":"Simulation","gamePlatform":"Web browser","playMode":"SinglePlayer","url":"https://mashdordev.github.io/pimp-my-gun/","image":"https://mashdordev.github.io/pimp-my-gun/media/screenshot-final.png"}
+  </script>
   <style>
-    :root { --bg: #111; --fg: #ddd; --muted: #888; }
-    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
-    body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 16px; box-sizing: border-box; }
-    #player { width: min(100%, calc((100vh - 80px) * 4 / 3)); aspect-ratio: 4 / 3; }
+    :root { --bg: #111; --fg: #ddd; --muted: #999; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+    body { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px; box-sizing: border-box; }
+    #player { width: min(100%, calc((100vh - 48px) * 4 / 3)); aspect-ratio: 4 / 3; }
     #player ruffle-player, #player ruffle-embed { width: 100%; height: 100%; display: block; }
-    footer { color: var(--muted); font-size: 12px; text-align: center; }
+    main { max-width: 720px; width: 100%; }
+    h1 { font-size: 22px; margin: 8px 0; }
+    p { margin: 0 0 12px; }
+    .note { color: var(--muted); font-size: 13px; border-left: 3px solid #444; padding-left: 12px; }
     a { color: var(--fg); }
   </style>
 </head>
 <body>
   <div id="player"></div>
-  <footer>Pimp My Gun by Doctor Noob, running in <a href="https://ruffle.rs">Ruffle</a>. <a href="https://github.com/MashdorDev/pimp-my-gun-asset-archive">Source and sprite archive</a></footer>
+  <main>
+    <h1>Pimp My Gun, the Flash gun builder</h1>
+    <p>Pick receivers, barrels, stocks, grips, handguards, magazines, sights and scopes from a library of real-world guns (M4, M16, AK, SCAR, HK416, MP5, SVD and more), drag them together into your own custom rifle, and save it as a JPG. It runs in <a href="https://ruffle.rs">Ruffle</a>, a Flash emulator, so no plugin is needed. Click the game once to unmute it.</p>
+    <p class="note">This is not my game. Pimp My Gun was made by Doctor Noob, and every right to it belongs to its creator. It is kept here only to preserve it, so it doesn't become lost media now that Flash is gone from browsers, and it is hosted with permission. If you are the creator and want it changed or taken down, <a href="https://github.com/MashdorDev/pimp-my-gun/issues">open an issue</a>.</p>
+    <p><a href="https://github.com/MashdorDev/pimp-my-gun">Source, screenshots and the game's sprite archive on GitHub</a></p>
+  </main>
   <script>
     window.RufflePlayer = window.RufflePlayer || {};
     window.RufflePlayer.config = { autoplay: "on", unmuteOverlay: "visible", letterbox: "on", splashScreen: true };
