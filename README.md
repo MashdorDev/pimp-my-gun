@@ -7,3 +7,7 @@ The folder names are the ones the files had when this archive was made. Many don
 This copy was taken from the asset library of Dead Reload, a game that builds its guns from these side-view parts. The game's cleaned-up, renamed copy lives in that project; this repository is the untouched original.
 
 No rights are claimed over this art. It belongs to its original creators.
+
+## Play it
+
+The original game file is in `game/pimpmygun.swf`. `index.html` runs it in the browser through [Ruffle](https://ruffle.rs), a Flash emulator, and the page is served with GitHub Pages. Pimp My Gun was made by Doctor Noob (pimpmygun.doctornoob.com) and is hosted here with permission.

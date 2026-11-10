@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pimp My Gun</title>
+  <meta name="description" content="Play the Flash game Pimp My Gun in the browser, through the Ruffle emulator.">
+  <style>
+    :root { --bg: #111; --fg: #ddd; --muted: #888; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+    body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 16px; box-sizing: border-box; }
+    #player { width: min(100%, calc((100vh - 80px) * 4 / 3)); aspect-ratio: 4 / 3; }
+    #player ruffle-player, #player ruffle-embed { width: 100%; height: 100%; display: block; }
+    footer { color: var(--muted); font-size: 12px; text-align: center; }
+    a { color: var(--fg); }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+  <footer>Pimp My Gun by Doctor Noob, running in <a href="https://ruffle.rs">Ruffle</a>. <a href="https://github.com/MashdorDev/pimp-my-gun-asset-archive">Source and sprite archive</a></footer>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = { autoplay: "on", unmuteOverlay: "visible", letterbox: "on", splashScreen: true };
+  </script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle@0.8.0-nightly.2026.10.20/ruffle.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      var player = window.RufflePlayer.newest().createPlayer();
+      document.getElementById("player").appendChild(player);
+      player.ruffle().load("game/pimpmygun.swf");
+    });
+  </script>
+</body>
+</html>
